@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        <header className="shadow h-16 w-auto flex flex-row justify-center items-center gap-200">
+        <header className="shadow h-16 w-full flex flex-row justify-center items-center gap-200">
           <h1 className="text-black font-extrabold flex flex-row">
             <Image src={logoIcon} alt="" />
             RENT
@@ -40,7 +40,10 @@ export default function RootLayout({
             <Image src={profileIcon} alt="" />
           </button>
         </header>
-        {children}
+        <main className="flex-1">{children}</main>
+        <footer className="shadow w-full bg-gray-200 text-gray-400 font-bold flex justify-center items-center h-16">
+          ©TimoourEnterprize
+        </footer>
       </body>
     </html>
   );
