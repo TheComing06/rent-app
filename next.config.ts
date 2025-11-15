@@ -31,9 +31,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-
-module.exports = {
-  env: {
-    yandex_api_key: "key"
-  }
-}

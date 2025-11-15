@@ -5,6 +5,8 @@ import Image from "next/image";
 import logoIcon from "../../public/images/logo.svg";
 import profileIcon from "../../public/images/profile.svg";
 import Script from "next/script";
+import * as React from "react";
+import type { YMapLocationRequest } from "ymaps3";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        style={{ padding: 0, margin: 0 }}
       >
         <header className="shadow h-16 w-full flex flex-row justify-center items-center gap-200">
           <h1 className="text-black font-extrabold flex flex-row">
@@ -41,9 +44,7 @@ export default function RootLayout({
             <Image src={profileIcon} alt="" />
           </button>
         </header>
-        <main className="flex-1">
-          {children} <Script src=""></Script>
-        </main>
+        <main className="flex-1">{children} </main>
         <footer className="shadow w-full bg-gray-200 text-gray-400 font-bold flex justify-center items-center h-16">
           ©TimoourEnterprize
         </footer>
