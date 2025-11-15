@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import logoIcon from "../../public/images/logo.svg";
+import profileIcon from "../../public/images/profile.svg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,10 +30,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="flex gap-2 items-center justify-center text-black font-extrabold ">
-          <div className="">
-            <Image color="red" src={logoIcon} alt="" /> RENT
-          </div>
+        <header className="shadow h-16 w-auto flex flex-row justify-center items-center gap-200">
+          <h1 className="text-black font-extrabold flex flex-row">
+            <Image src={logoIcon} alt="" />
+            RENT
+          </h1>
+          <button className="font-extrabold text-black bg-neutral-100 shadow py-2 px-3 hover:bg-neutral-300 rounded-md flex flex-row gap-2 items-center justify-center">
+            Войти
+            <Image src={profileIcon} alt="" />
+          </button>
         </header>
         {children}
       </body>
