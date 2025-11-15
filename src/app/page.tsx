@@ -9,7 +9,7 @@ export default function Home() {
         src={`https://api-maps.yandex.ru/v3/?apikey=${process.env.YANDEX_API_KEY}&lang=ru_RU`}
         strategy="beforeInteractive"
       />
-      <div style={{ width: "100svw", height: "100svh" }}>
+      <div>
         <Map />
       </div>
     </>
