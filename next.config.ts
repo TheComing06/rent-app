@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { env } from "process";
 
 const nextConfig: NextConfig = {
   webpack(config) {
@@ -30,3 +31,9 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+module.exports = {
+  env: {
+    yandex_api_key: "key"
+  }
+}

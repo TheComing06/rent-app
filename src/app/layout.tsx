@@ -4,6 +4,7 @@ import "./globals.css";
 import Image from "next/image";
 import logoIcon from "../../public/images/logo.svg";
 import profileIcon from "../../public/images/profile.svg";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,7 +41,9 @@ export default function RootLayout({
             <Image src={profileIcon} alt="" />
           </button>
         </header>
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          {children} <Script src=""></Script>
+        </main>
         <footer className="shadow w-full bg-gray-200 text-gray-400 font-bold flex justify-center items-center h-16">
           ©TimoourEnterprize
         </footer>
