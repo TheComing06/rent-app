@@ -1,5 +1,3 @@
-"use client";
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -10,7 +8,6 @@ import Script from "next/script";
 import * as React from "react";
 import type { YMapLocationRequest } from "ymaps3";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +29,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const router = useRouter();
   return (
     <html lang="en">
       <body
@@ -40,14 +36,14 @@ export default function RootLayout({
         style={{ padding: 0, margin: 0 }}
       >
         <header className="shadow h-16 w-full flex flex-row justify-center items-center gap-200">
-          <h1 className="text-black font-extrabold flex flex-row">
+          <Link href=".." className="text-black font-extrabold flex flex-row">
             <Image src={logoIcon} alt="" />
             RENT
-          </h1>
-          <button onClick={() => router.push('/auth')} className="font-extrabold text-black bg-neutral-100 shadow py-2 px-3 hover:bg-neutral-300 rounded-md flex flex-row gap-2 items-center justify-center transform hover:scale-125 transition ease-in-out duration-200">
+          </Link>
+          <Link href="/auth" className="font-extrabold text-black bg-neutral-100 shadow py-2 px-3 hover:bg-neutral-300 rounded-md flex flex-row gap-2 items-center justify-center transform hover:scale-125 transition ease-in-out duration-200">
             Войти
             <Image src={profileIcon} alt="" />
-          </button>
+          </Link>
         </header>
         <main className="flex-1">{children} </main>
         <footer className="shadow w-full bg-gray-200 text-gray-400 font-bold flex justify-center items-center h-16">
