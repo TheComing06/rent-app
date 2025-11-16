@@ -1,6 +1,6 @@
 import * as React from "react";
 import Script from "next/script";
-import Map from "../../components/map";
+import Map from "../app/components/map";
 
 export default function Home() {
   return (
