@@ -39,7 +39,7 @@ export default function RootLayout({
             <Image src={logoIcon} alt="" />
             RENT
           </h1>
-          <button className="font-extrabold text-black bg-neutral-100 shadow py-2 px-3 hover:bg-neutral-300 rounded-md flex flex-row gap-2 items-center justify-center">
+          <button className="font-extrabold text-black bg-neutral-100 shadow py-2 px-3 hover:bg-neutral-300 rounded-md flex flex-row gap-2 items-center justify-center transform hover:scale-125 transition ease-in-out duration-200">
             Войти
             <Image src={profileIcon} alt="" />
           </button>
