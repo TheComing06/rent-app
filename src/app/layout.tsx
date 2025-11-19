@@ -8,6 +8,7 @@ import Script from "next/script";
 import * as React from "react";
 import type { YMapLocationRequest } from "ymaps3";
 import Link from "next/link";
+import uploadIcon from "../../public/images/upload.svg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,10 +41,19 @@ export default function RootLayout({
             <Image src={logoIcon} alt="" />
             RENT
           </Link>
-          <Link href="/auth" className="font-extrabold text-black bg-neutral-100 shadow py-2 px-3 hover:bg-neutral-300 rounded-md flex flex-row gap-2 items-center justify-center transform hover:scale-125 transition ease-in-out duration-200">
-            Войти
-            <Image src={profileIcon} alt="" />
-          </Link>
+          <div className="flex flex-row gap-10">
+            <button className="font-medium text-black bg-neutral-100 shadow py-2 px-3 hover:bg-neutral-300 rounded-md flex flex-row gap-2 items-center justify-center transform hover:scale-125 transition ease-in-out duration-200">
+              <Image src={uploadIcon} alt="" />
+              Разместить
+            </button>
+            <Link
+              href="/auth"
+              className="font-extrabold text-black bg-neutral-100 shadow py-2 px-3 hover:bg-neutral-300 rounded-md flex flex-row gap-2 items-center justify-center transform hover:scale-125 transition ease-in-out duration-200"
+            >
+              Войти
+              <Image src={profileIcon} alt="" />
+            </Link>
+          </div>
         </header>
         <main className="flex-1">{children} </main>
         <footer className="shadow w-full bg-gray-200 text-gray-400 font-bold flex justify-center items-center h-16">
