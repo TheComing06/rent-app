@@ -39,10 +39,11 @@ export default function Register() {
             maxLength={100}
             className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
           />
-          <input
+          <InputMask
             placeholder="Телефон"
             type="text"
             maxLength={30}
+            mask="+7(999)999-99-99"
             className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
           />
           <input
