@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import ReactInputMask from "react-input-mask";
+// import ReactInputMask from "react-input-mask";
 
 export default function Register() {
   return (
