@@ -20,8 +20,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rent: Home",
-  description: "Home page",
+  title: "Rent",
+  description: "Rent-app. Take your home now",
 };
 
 export default function RootLayout({
