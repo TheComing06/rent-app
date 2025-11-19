@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import InputMask from "react-input-mask";
+import ReactInputMask from "react-input-mask";
 
 export default function Register() {
   return (
@@ -39,11 +39,17 @@ export default function Register() {
             maxLength={100}
             className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
           />
-          <InputMask
+          {/* <ReactInputMask
             placeholder="Телефон"
             type="text"
             maxLength={30}
             mask="+7(999)999-99-99"
+            className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
+          /> */}
+          <input
+            placeholder="Телефон"
+            type="text"
+            maxLength={30}
             className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
           />
           <input
