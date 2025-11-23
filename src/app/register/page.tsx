@@ -13,6 +13,7 @@ export default function Register() {
           <input
             placeholder="Логин"
             type="text"
+            maxLength={20}
             className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
           />
           <input
