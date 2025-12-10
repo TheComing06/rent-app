@@ -2,13 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
-import logoIcon from "../../public/images/logo.svg";
-import profileIcon from "../../public/images/profile.svg";
 import Script from "next/script";
 import * as React from "react";
 import type { YMapLocationRequest } from "ymaps3";
 import Link from "next/link";
-import uploadIcon from "../../public/images/upload.svg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,12 +35,12 @@ export default function RootLayout({
       >
         <header className="shadow h-16 w-full flex flex-row justify-center items-center gap-200">
           <Link href=".." className="text-black font-extrabold flex flex-row">
-            <Image src={logoIcon} alt="" />
+            <Image src={"/images/logo.svg"} alt="" width={24} height={24} />
             RENT
           </Link>
           <div className="flex flex-row gap-10">
             <button className="font-medium text-black bg-neutral-100 shadow py-2 px-3 hover:bg-neutral-300 rounded-md flex flex-row gap-2 items-center justify-center transform hover:scale-125 transition ease-in-out duration-200">
-              <Image src={uploadIcon} alt="" />
+              <Image src={"/images/upload.svg"} alt="" width={24} height={24} />
               Разместить
             </button>
             <Link
@@ -51,7 +48,12 @@ export default function RootLayout({
               className="font-extrabold text-black bg-neutral-100 shadow py-2 px-3 hover:bg-neutral-300 rounded-md flex flex-row gap-2 items-center justify-center transform hover:scale-125 transition ease-in-out duration-200"
             >
               Войти
-              <Image src={profileIcon} alt="" />
+              <Image
+                src={"/images/profile.svg"}
+                alt=""
+                width={24}
+                height={24}
+              />
             </Link>
           </div>
         </header>
