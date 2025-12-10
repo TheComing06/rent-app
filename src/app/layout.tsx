@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
-import Script from "next/script";
 import * as React from "react";
-import type { YMapLocationRequest } from "ymaps3";
 import Link from "next/link";
 
 const geistSans = Geist({
