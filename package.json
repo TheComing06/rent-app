@@ -9,7 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@nestjs/common": "^11.1.9",
     "@next/env": "^16.0.3",
+    "@prisma/client": "^7.1.0",
     "dotenv": "^17.2.3",
     "next": "^15.5.7",
     "pg": "^8.16.3",
@@ -29,6 +31,7 @@
     "@yandex/ymaps3-types": "^1.0.17989890",
     "eslint": "^9",
     "eslint-config-next": "15.5.6",
+    "prisma": "^7.1.0",
     "tailwindcss": "^4",
     "tsx": "^4.21.0",
     "typescript": "^5"

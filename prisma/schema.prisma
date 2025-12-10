@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  login String
+  password String
+  firstName String @map("first_name")
+  secondName String @map("second_name")
+  thirdName String? @map("third_name")
+  email String
+  phone String
+  rents Rent[]
+
+  @@map("users")
+}
+
+model Rent {
+  id Int @id @default(autoincrement())
+  userId Int
+  user User @relation(fields: [userId], references: [id])
+  address String
+  city String
+  roomsCount Int @map("rooms_count")
+  area Float
+  price Decimal
+  startDate DateTime @map("start_date")
+  endDate DateTime? @map("end_date")
+  status RentStatus 
+  description String?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("rents")
+}
+
+enum RentStatus {
+  PENDING
+  ACTIVE
+  PAUSED
+  CLOSED
+}
