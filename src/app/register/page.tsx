@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { registerUser } from "./actions";
 // import ReactInputMask from "react-input-mask";
 
 export default function Register() {
@@ -10,55 +11,57 @@ export default function Register() {
           Регистрация
         </h1>
         <div className="flex flex-col gap-3 items-center justify-center">
-          <input
-            placeholder="Логин"
-            type="text"
-            maxLength={20}
-            className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
-          />
-          <input
-            placeholder="Имя"
-            type="text"
-            maxLength={100}
-            className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
-          />
-          <input
-            type="text"
-            placeholder="Фамилия"
-            maxLength={100}
-            className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
-          />
-          <input
-            type="text"
-            placeholder="Отчество"
-            maxLength={100}
-            className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
-          />
-          <input
-            placeholder="Почта"
-            type="text"
-            maxLength={100}
-            className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
-          />
-          {/* <ReactInputMask
-            placeholder="Телефон"
-            type="text"
-            maxLength={30}
-            mask="+7(999)999-99-99"
-            className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
-          /> */}
-          <input
-            placeholder="Телефон"
-            type="text"
-            maxLength={30}
-            className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
-          />
-          <input
-            placeholder="Пароль"
-            type="password"
-            maxLength={20}
-            className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
-          />
+          <form action={registerUser}>
+            <input
+              placeholder="Логин"
+              type="text"
+              maxLength={20}
+              className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
+            />
+            <input
+              placeholder="Имя"
+              type="text"
+              maxLength={100}
+              className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
+            />
+            <input
+              type="text"
+              placeholder="Фамилия"
+              maxLength={100}
+              className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
+            />
+            <input
+              type="text"
+              placeholder="Отчество"
+              maxLength={100}
+              className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
+            />
+            <input
+              placeholder="Почта"
+              type="text"
+              maxLength={100}
+              className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
+            />
+            {/* <ReactInputMask
+              placeholder="Телефон"
+              type="text"
+              maxLength={30}
+              mask="+7(999)999-99-99"
+              className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
+            /> */}
+            <input
+              placeholder="Телефон"
+              type="text"
+              maxLength={30}
+              className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
+            />
+            <input
+              placeholder="Пароль"
+              type="password"
+              maxLength={20}
+              className="shadow rounded-md bg-neutral-200 text-black font-medium text-base w-auto h-auto px-1.5"
+            />
+          </form>
           <input
             placeholder="Пароль повторно"
             type="password"
