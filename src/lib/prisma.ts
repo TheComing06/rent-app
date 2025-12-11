@@ -1,13 +1,16 @@
-import { PrismaClient } from "@prisma/client"
+import { PrismaClient as PrismaClientClassRaw } from "@/generated/prisma/client"
+import type { PrismaClient as PrismaClientType } from "@/generated/prisma/client"
+
+const PrismaClientClass = PrismaClientClassRaw as unknown as {
+  new (): PrismaClientType
+}
 
 const globalForPrisma = globalThis as unknown as {
-  prisma?: PrismaClient
+  prisma?: PrismaClientType
 }
 
 export const prisma =
   globalForPrisma.prisma ??
-  new PrismaClient({
-    // log: ['query'],
-  })
+  new PrismaClientClass()
 
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma
